@@ -2,7 +2,6 @@
 import React from "react";
 
 // Internal Modules
-import Landing from './components/landing/landing';
 
 // Data
 
@@ -12,7 +11,7 @@ import Landing from './components/landing/landing';
 export default () => {
     return(
         <>
-            <Landing />
+            <p>Personal card component works!</p>    
         </>
     )
 }
