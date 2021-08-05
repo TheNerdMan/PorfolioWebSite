@@ -6,5 +6,5 @@ import { IHelmet } from '../app/interfaces/helmet.interface';
 export const helmetTopLevelData: IHelmet = {    
   title: 'Alex Wilson | Bumbling fool', // <head> title
   lang: 'en', 
-  description: '', // <head> description
+  description: 'A web developers portfolio site', // <head> description
 }

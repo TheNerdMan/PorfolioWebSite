@@ -10,15 +10,22 @@ import ComponentSwapper from '../component-swapper/component-swapper';
 // Data
 
 // Styles
+import '../../../style/main.scss';
 
 // Markup
 export default () => {
+
+    let layoutClassName = 'landing-container'
+    let cardClassName = 'personal-card'
+
     return(
         <>
-           <Card />
-           <ComponentSwapper />
-           <Blurb />
-           <Repos />
+            <div className={layoutClassName}>
+                <Card />
+                <ComponentSwapper />
+                <Blurb />
+                <Repos />
+            </div>
         </>
     )
 }

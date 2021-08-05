@@ -1,0 +1,10 @@
+@import url("../variables/_variables.scss");
+
+.landing-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    background-color: $dark-purple;
+    color: $white;
+}

@@ -6,12 +6,13 @@ import React from "react";
 // Data
 
 // Styles
+import '../../../style/main.scss';
 
 // Markup
-export default () => {
-    return(
-        <>
-            <p>Personal card component works!</p>    
-        </>
-    )
-}
+const Card = () => (
+    <>
+        <p>Personal card component works!</p>    
+    </>
+);
+
+export default Card;
