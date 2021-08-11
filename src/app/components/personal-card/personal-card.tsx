@@ -5,9 +5,6 @@ import React from "react";
 
 // Data
 
-// Styles
-import '../../../style/main.scss';
-
 // Markup
 const Card = () => (
     <>

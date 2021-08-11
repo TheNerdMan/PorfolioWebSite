@@ -1,10 +1,8 @@
 // this file imports all sass stylesheets
 
-// text
-@import url("./text/colours.scss");
+// utilities
+@import "./utilities/variables";
 
-// colour
-@import url("./variables/_variables.scss");
-
-// layout
-@import url("./layout/layout.scss");
+// scss
+@import "./base/text";
+@import "./base/layout";

@@ -9,9 +9,6 @@ import ComponentSwapper from '../component-swapper/component-swapper';
 
 // Data
 
-// Styles
-import '../../../style/main.scss';
-
 // Markup
 export default () => {
 
@@ -22,9 +19,10 @@ export default () => {
         <>
             <div className={layoutClassName}>
                 <Card />
-                <ComponentSwapper />
-                <Blurb />
-                <Repos />
+                <ComponentSwapper>
+                    <Blurb />
+                    <Repos />
+                </ComponentSwapper>
             </div>
         </>
     )
