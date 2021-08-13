@@ -9,21 +9,42 @@ import ComponentSwapper from '../component-swapper/component-swapper';
 
 // Data
 
-// Markup
-export default () => {
-
-    let layoutClassName = 'landing-container'
-    let cardClassName = 'personal-card'
-
-    return(
-        <>
-            <div className={layoutClassName}>
-                <Card />
-                <ComponentSwapper>
-                    <Blurb />
-                    <Repos />
-                </ComponentSwapper>
-            </div>
-        </>
-    )
+// Interfaces
+interface PropsType {
 }
+interface StateType {
+}
+
+
+class Landing extends React.Component<PropsType, StateType> {
+    // Component Properties    
+    public layoutClassName = 'landing-container'
+    public cardClassName = 'personal-card'
+
+    // Constructor
+    constructor(props: any) {
+        super(props); 
+    };   
+   
+    // Component Life Cycle
+
+    // Component Functions
+    
+
+    // Markup
+    public render() {
+        return(
+            <>
+                <div className={this.layoutClassName}>
+                    <Card />
+                    <ComponentSwapper>
+                        <Blurb />
+                        <Repos />
+                    </ComponentSwapper>
+                </div>
+            </>
+        )
+    };
+}
+
+export default Landing

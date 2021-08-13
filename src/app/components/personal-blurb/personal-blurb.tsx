@@ -5,13 +5,34 @@ import React from "react";
 
 // Data
 
-// Styles
-
-// Markup
-export default () => {
-    return(
-        <>
-            <p>Personal blurb component works!</p>
-        </>
-    )
+// Interfaces
+interface PropsType {
 }
+interface StateType {
+}
+
+
+class PersonalBlurb extends React.Component<PropsType, StateType> {
+    // Component Properties    
+
+    // Constructor
+    constructor(props: any) {
+        super(props); 
+    };   
+   
+    // Component Life Cycle
+
+    // Component Functions
+    
+
+    // Markup
+    public render() {
+        return(
+            <>
+                <p>Personal blurb component works!</p>                
+            </>
+        )
+    };
+}
+
+export default PersonalBlurb

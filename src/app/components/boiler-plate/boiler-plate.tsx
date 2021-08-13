@@ -12,7 +12,7 @@ interface StateType {
 }
 
 
-class PersonalCard extends React.Component<PropsType, StateType> {
+class NewComponent extends React.Component<PropsType, StateType> {
     // Component Properties    
 
     // Constructor
@@ -29,10 +29,10 @@ class PersonalCard extends React.Component<PropsType, StateType> {
     public render() {
         return(
             <>
-                <p>Personal Card component works!</p>                
+                <p>New component works!</p>                
             </>
         )
     };
 }
 
-export default PersonalCard
+export default NewComponent
