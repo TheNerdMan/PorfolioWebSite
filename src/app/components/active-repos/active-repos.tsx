@@ -29,7 +29,9 @@ class ActiveRepos extends React.Component<PropsType, StateType> {
     public render() {
         return(
             <>
-                <p>Active Repos component works!</p>                
+                <div className="active-repos">
+                    <p>Active Repos component works!</p>                
+                </div>
             </>
         )
     };

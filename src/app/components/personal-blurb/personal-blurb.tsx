@@ -29,7 +29,9 @@ class PersonalBlurb extends React.Component<PropsType, StateType> {
     public render() {
         return(
             <>
-                <p>Personal blurb component works!</p>                
+                <div className="personal-blurb">
+                    <p>Personal blurb component works!</p>      
+                </div>
             </>
         )
     };
