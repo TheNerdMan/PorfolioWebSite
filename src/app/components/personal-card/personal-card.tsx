@@ -3,9 +3,8 @@ import React from "react";
 
 // Internal Modules
 
-// Data
+// SVGs
 import Logo from "../../../assets/images/logo.svg";
-
 // Interfaces
 interface PropsType {
 }
@@ -33,11 +32,14 @@ class PersonalCard extends React.Component<PropsType, StateType> {
                 <div className="personal-card">
                     <img className="logo" src={Logo}/>
                     <h1 className="hello-text">Hi! I'm Alex</h1>
-                    <p className="little-info">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Laborum id placeat non dicta veritatis distinctio. Modi, 
-                        assumenda sint nobis architecto sit ab quae non expedita explicabo fugit, 
-                        mollitia ipsum quam!
+                    <p>
+                        I'm a full stack web developer who loves games.
+                        One day I'd like to build my own game.
+                        For now, check out the sites I've created, worked on,
+                        or helped out with.
+                    </p>
+                    <p>
+                        Overall I'm a bit of nerd and I'd love to hear about your project!
                     </p>
                 </div> 
             </>

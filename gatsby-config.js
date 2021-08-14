@@ -5,14 +5,13 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass", 
-  "gatsby-plugin-react-helmet", 
-  {
-    resolve: `gatsby-plugin-typescript`,
-    options: {
-      isTSX: true, // defaults to false
-      jsxPragma: `jsx`, // defaults to "React"
-      allExtensions: false, 
-    },
-    
-  }],
+    "gatsby-plugin-react-helmet", 
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true,
+        allExtensions: true
+      }
+    }
+  ],
 };

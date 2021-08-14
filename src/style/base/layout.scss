@@ -1,3 +1,4 @@
+// -------- Landing Component -------------
 .landing-container {
     display: flex;
     
@@ -11,7 +12,9 @@
     color: $white;
 }
 
-.personal-card {    
+// -------- Card Components -------------
+.personal-card,
+.languages-card {    
     background: $white;
     width: 25em;
     display: flex;
@@ -20,18 +23,34 @@
     padding: 2em;
     border-radius: 2em;
     filter: drop-shadow(6px 6px 15px $black);
+    color: $black;    
+}
 
+.personal-card {
     .logo {
         width: 15em;
         margin: auto;
     }
-
-    .hello-text,
-    .little-info {        
-        color: $black;
-    }
 }
 
+.languages-card {
+    text-align: center;
+    .language-icons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .language-icon {
+            width: 3em;
+            flex: 0 23%;
+            margin: 3px 0.5em;        
+        }
+    }    
+}
+
+// -------- Large Cards Components -------------
 .personal-blurb,
 .active-repos {
     background: $white;

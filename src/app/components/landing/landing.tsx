@@ -2,7 +2,8 @@
 import React from "react";
 
 // Internal Modules
-import Card from '../personal-card/personal-card';
+import PersonalCard from '../personal-card/personal-card';
+import LanguagesCard from '../languages-card/languages-card';
 import Blurb from '../personal-blurb/personal-blurb';
 import Repos from '../active-repos/active-repos';
 import ComponentSwapper from '../component-swapper/component-swapper';
@@ -36,7 +37,10 @@ class Landing extends React.Component<PropsType, StateType> {
         return(
             <>
                 <div className={this.layoutClassName}>
-                    <Card />
+                    <ComponentSwapper>
+                        <PersonalCard />
+                        <LanguagesCard />
+                    </ComponentSwapper>
                     <ComponentSwapper>
                         <Blurb />
                         <Repos />
