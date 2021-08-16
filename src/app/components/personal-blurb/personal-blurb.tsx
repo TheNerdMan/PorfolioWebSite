@@ -29,7 +29,7 @@ class PersonalBlurb extends React.Component<PropsType, StateType> {
     public render() {
         return(
             <>
-                <div className="personal-blurb">
+                <div className="personal-blurb large-card">
                     <p>Personal blurb component works!</p>      
                 </div>
             </>

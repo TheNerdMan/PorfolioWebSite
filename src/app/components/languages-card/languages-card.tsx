@@ -41,7 +41,7 @@ class LanguagesCard extends React.Component<PropsType, StateType> {
     public render() {
         return(
             <>
-                 <div className="languages-card">
+                 <div className="languages-card card">
                     <h4>JS Frameworks</h4>                        
                     <div className="language-icons">
                         <img className="language-icon" src={AngularLogo}/>

@@ -29,7 +29,7 @@ class PersonalCard extends React.Component<PropsType, StateType> {
     public render() {
         return(
             <>
-                <div className="personal-card">
+                <div className="personal-card card">
                     <img className="logo" src={Logo}/>
                     <h1 className="hello-text">Hi! I'm Alex</h1>
                     <p>

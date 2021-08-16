@@ -12,9 +12,20 @@
     color: $white;
 }
 
+.tempbutton {
+    position: fixed;    
+    &.small {
+        left: 1em;
+    }
+    &.large {
+        left: 8em;
+    }
+}
+
 // -------- Card Components -------------
 .personal-card,
 .languages-card {    
+    opacity: 0;
     background: $white;
     width: 25em;
     display: flex;
@@ -53,6 +64,7 @@
 // -------- Large Cards Components -------------
 .personal-blurb,
 .active-repos {
+    opacity: 0;
     background: $white;
     width: 50em;
     height: 30em;
