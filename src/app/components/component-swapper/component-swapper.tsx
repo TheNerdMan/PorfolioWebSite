@@ -8,7 +8,7 @@ import React from "react";
 // Interfaces
 interface PropsType {
     children?: JSX.Element[];
-    shownIndex: number;
+    propsShownIndex?: number;
 }
 interface StateType {
     shownIndex: number
@@ -17,8 +17,8 @@ interface StateType {
 
 class ComponentSwapper extends React.Component<PropsType, StateType> {
     // Component Properties    
-    public state: StateType = {
-        shownIndex: this.props.shownIndex
+    public state: StateType = {        
+        shownIndex: this.props.propsShownIndex ?? 0
     }
 
     // Constructor
@@ -27,11 +27,25 @@ class ComponentSwapper extends React.Component<PropsType, StateType> {
     };   
    
     // Component Life Cycle
-
     componentWillReceiveProps(nextProps: PropsType) {
-        this.setState({shownIndex: nextProps.shownIndex})
+        if (nextProps.propsShownIndex && nextProps.propsShownIndex != this.state.shownIndex) {
+            this.setState({shownIndex: nextProps.propsShownIndex})
+        }
     }
     
+    // Component Functions
+    public cycleComponents = () => {
+        if (this.state.shownIndex >= (this.props.children?.length ?? 0) - 1) {
+            this.setState(() => {
+                return {shownIndex: 0};
+            })        
+        } else { 
+            this.setState((state) => {
+                return {shownIndex: state.shownIndex + 1};
+            })
+        }     
+    };
+
     // Markup
     public render() {
         return(
