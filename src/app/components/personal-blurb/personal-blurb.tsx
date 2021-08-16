@@ -1,12 +1,15 @@
 // External Modules
-import React from "react";
+import React, { RefObject } from "react";
+import ComponentSwapper from "../component-swapper/component-swapper";
 
 // Internal Modules
 
 // Data
 
 // Interfaces
-interface PropsType {
+interface PropsType {    
+    children?: JSX.Element[];
+    parentCSReference?: RefObject<ComponentSwapper>;
 }
 interface StateType {
 }
@@ -23,7 +26,9 @@ class PersonalBlurb extends React.Component<PropsType, StateType> {
     // Component Life Cycle
 
     // Component Functions
-    
+    private swap = () => {
+        this.props.parentCSReference?.current?.cycleComponents();
+    }
 
     // Markup
     public render() {
@@ -31,6 +36,7 @@ class PersonalBlurb extends React.Component<PropsType, StateType> {
             <>
                 <div className="personal-blurb large-card">
                     <p>Personal blurb component works!</p>      
+                    <button className="tempbutton small" onClick={this.swap}>Swap</button>
                 </div>
             </>
         )

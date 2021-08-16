@@ -1,12 +1,15 @@
 // External Modules
-import React from "react";
+import React, { RefObject } from "react";
 
 // Internal Modules
+import ComponentSwapper from "../component-swapper/component-swapper";
 
 // SVGs
 import Logo from "../../../assets/images/logo.svg";
 // Interfaces
 interface PropsType {
+    children?: JSX.Element[];
+    parentCSReference?: RefObject<ComponentSwapper>;
 }
 interface StateType {
 }
@@ -23,7 +26,9 @@ class PersonalCard extends React.Component<PropsType, StateType> {
     // Component Life Cycle
 
     // Component Functions
-    
+    private swap = () => {
+        this.props.parentCSReference?.current?.cycleComponents();
+    }
 
     // Markup
     public render() {
@@ -41,6 +46,7 @@ class PersonalCard extends React.Component<PropsType, StateType> {
                     <p>
                         Overall I'm a bit of nerd and I'd love to hear about your project!
                     </p>
+                    <button className="tempbutton small" onClick={this.swap}>Swap</button>
                 </div> 
             </>
         )

@@ -47,16 +47,14 @@ class Landing extends React.Component<PropsType, StateType> {
     public render() {
         return(
             <>
-                <button className="tempbutton small" onClick={this.swapSmall}>Swap Small</button>
-                <button className="tempbutton large" onClick={this.swapLarge}>Swap Large</button>
                 <div className="landing-container">
                     <ComponentSwapper ref={this.csSmall}>
-                        <PersonalCard />
-                        <LanguagesCard />
+                        <PersonalCard parentCSReference={this.csSmall} />
+                        <LanguagesCard parentCSReference={this.csSmall} />
                     </ComponentSwapper>
                     <ComponentSwapper ref={this.csLarge}>
-                        <Blurb />
-                        <Repos />
+                        <Blurb parentCSReference={this.csLarge} />
+                        <Repos parentCSReference={this.csLarge} />
                     </ComponentSwapper>
                 </div>
             </>
