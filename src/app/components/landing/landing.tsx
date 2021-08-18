@@ -34,14 +34,6 @@ class Landing extends React.Component<PropsType, StateType> {
     // Component Life Cycle
 
     // Component Functions
-    public swapSmall = () => {        
-        this.csSmall.current?.cycleComponents();
-    }
-
-    public swapLarge = () => {        
-        this.csLarge.current?.cycleComponents();
-    }
-
 
     // Markup
     public render() {
